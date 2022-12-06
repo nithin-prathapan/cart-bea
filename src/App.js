@@ -1,14 +1,19 @@
 import React from "react";
-import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Signin from "./components/Signin";
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
       <Navbar />
-      <Home />
-      <Cart/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };

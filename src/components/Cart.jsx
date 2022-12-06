@@ -1,33 +1,328 @@
 import React from "react";
-import Dress from "../images/d60cae213c52ae8111a55da8ff28e5b8.png";
 import "./styles.css";
+import ruffle from "../images/ruffle.png";
+
 const Cart = () => {
   return (
-    <div className="h-[100%] px-4 grid md:grid-cols-2 gap-y-4 gap-x-4 lg:grid-cols-4">
+    <div className="h-[100%] my-10 mx-auto grid md:grid-cols-2 gap-y-4 gap-x-4 lg:grid-cols-4">
       <div
         id="border-right"
         className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
        bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
        border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
       >
         <div
           id="image-container"
-          className="max-w-[240px] h-[100%] mx-auto grid"
+          className="max-w-[240px] h-[100%] mx-auto grid "
         >
           <img
             id="img"
-            src={Dress}
+            src={ruffle}
             alt=""
-            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7"
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
           />
 
-          <h1 className="mx-auto items-center justify-center">Ruffle</h1>
-          <h3 className="mx-auto items-center justify-center">
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
             Price : <span>$ 25</span>
           </h3>
-          <h1 className="mx-auto items-center justify-center">
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
             Rating :<span>⭐⭐⭐⭐⭐</span>
           </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
+
+          <button
+            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
+           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+            mx-auto mt-3 rounded-lg text-[#000300] border-none"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+      <div
+        id="border-right"
+        className="text-[#fee] justify-center py-4 px-4 items-center m-5 mx-auto flex
+       bg-[#000300] h-full max-w-[240px] border
+       hover:scale-110 ease-in-out duration-500 hover:translate-x-3
+       border-r rounded-r-md border-r-gray-50 {border-b}after:50%"
+      >
+        <div
+          id="image-container"
+          className="max-w-[240px] h-[100%] mx-auto grid "
+        >
+          <img
+            id="img"
+            src={ruffle}
+            alt=""
+            className="h-36 w-36 mx-auto hover:scale-125 duration-300 transform hover:translate-x-7 cursor-pointer"
+          />
+
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Ruffle
+          </h1>
+          <h3 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Price : <span>$ 25</span>
+          </h3>
+          <h1 className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Rating :<span>⭐⭐⭐⭐⭐</span>
+          </h1>
+          <p className="mx-auto items-center justify-center text-center hover:text-yellow-500 cursor-pointer">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+            dolores asperiores veniam nobis deleniti cumque!
+          </p>
 
           <button
             className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
