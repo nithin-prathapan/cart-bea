@@ -5,7 +5,7 @@ import twitter from "../images/twitter.svg";
 
 const Footer = () => {
   return (
-    <footer className="text-white bg-[#5D5c61] p-4 absolute w-[100%] h-full min-w-full mx-auto ">
+    <footer className="text-white bg-[#5D5c61] p-4 relative min-w-[100%] h-full  mx-auto ">
       <div className="flex">
         <div className="w-[60%] h-full sm:min-w-[60%] ">
           <h1 className="text-3xl fonat-semibold text-blueGray-700 mt-2">
@@ -75,23 +75,23 @@ const Footer = () => {
       </div>
       <div className="border"></div>
       <div className="w-full py-2 mx-auto text-center">
-        <span className="hover:text-[#000300] hover:font-bold hover:translate-x-3 transform transition-all hover:py-1 duration-300 ease-in ">
+        <span className="hover:text-[#000300] hover:font-bold cursor-pointer relative duration-300 ease-in ">
           Copyright
         </span>{" "}
-        <span className="hover:text-[#000300] hover:font-bold hover:translate-x-3 transform transition-all hover:py-1 duration-300 ease-in ">
+        <span className="hover:text-[#000300] hover:font-bold cursor-pointer relative duration-300 ease-in ">
           ©
         </span>{" "}
-        <span className="hover:text-[#000300] hover:font-bold hover:translate-x-3 transform transition-all hover:py-1 duration-300 ease-in ">
+        <span className="hover:text-[#000300] hover:font-bold cursor-pointer relative duration-300 ease-in ">
           2021
         </span>
-        <span className="hover:text-[#000300] hover:font-bold hover:translate-x-3 transform transition-all hover:py-1 duration-300 ease-in ">
+        <span className="hover:text-[#000300] hover:font-bold cursor-pointer relative duration-300 ease-in ">
           {" "}
           Notus
         </span>{" "}
-        <span className="hover:text-[#000300] hover:font-bold hover:translate-x-3 transform transition-all hover:py-1 duration-300 ease-in ">
+        <span className="hover:text-[#000300] hover:font-bold cursor-pointer relative duration-300 ease-in ">
           JS by
         </span>{" "}
-        <span className="hover:text-[#000300] hover:font-bold hover:translate-x-3 transform transition-all hover:py-1 duration-300 ease-in ">
+        <span className="hover:text-[#000300] hover:font-bold cursor-pointer relative duration-300 ease-in ">
           Cart-Bae
         </span>
       </div>

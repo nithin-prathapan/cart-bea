@@ -5,9 +5,9 @@ import "./styles.css";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   return (
-    <div className="w-full max-h-[40px] drop-shadow-lg bg-[#000300] z-30 h-24 fixed top-0 items-center px-4 justify-between flex text-[#fee] mx-auto font-bold font-sans">
+    <div className="w-full max-h-[40px] drop-shadow-lg bg-[#000300] z-30 h-24 fixed top-0 items-center px-4 justify-between flex text-[#fee] mx-auto font-bold">
       <Link to="/">
-        <h1 className="p-4 text-[#00df9a] top-0  text-3xl m-4">CART-BAE</h1>
+        <h1 className="p-4 text-green-600 top-0  text-3xl m-4">CART-BAE</h1>
       </Link>{" "}
       <ul className="uppercase md:flex hidden">
         <Link className="font-thin" to="/">
@@ -42,15 +42,15 @@ const Navbar = () => {
       >
         <div className="border-r">
           <Link to="/">
-            <h1 className="p-4 text-[#00df9a] top-0  text-3xl m-4">CART-BAE</h1>
+            <h1 className="p-4  text-green-600 top-0  text-3xl m-4">CART-BAE</h1>
           </Link>
           <ul className="uppercase  justify-center mx-auto block px-4 md:hidden">
-            <li className="p-4 font-thin border-b border-b-gray-500">Home</li>
-            <li className="p-4 font-thin border-b border-b-gray-500">About</li>
-            <li className="p-4 font-thin border-b border-b-gray-500">
+            <li className="p-4 font-thin border-b border-b-gray-500 hover:text-yellow-500 hover:font-semibold link-underline duration-300 ease-in-out cursor-pointer">Home</li>
+            <li className="p-4 font-thin border-b border-b-gray-500 hover:text-yellow-500 hover:font-semibold link-underline duration-300 ease-in-out cursor-pointer">About</li>
+            <li className="p-4 font-thin border-b border-b-gray-500 hover:text-yellow-500 hover:font-semibold link-underline duration-300 ease-in-out cursor-pointer">
               Company
             </li>
-            <li className="p-4 font-thin border-b border-b-gray-500">
+            <li className="p-4 font-thin border-b border-b-gray-500 hover:text-yellow-500 hover:font-semibold link-underline duration-300 ease-in-out cursor-pointer">
               Resources
             </li>
             <Link to="/signin">

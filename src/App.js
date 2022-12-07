@@ -7,7 +7,7 @@ import Signin from "./components/Signin";
 
 const App = () => {
   return (
-    <div className="container">
+    <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
