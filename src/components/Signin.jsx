@@ -1,25 +1,46 @@
 import React, { useState } from 'react'
 import ReactTyped from 'react-typed'
 import { FcGoogle } from 'react-icons/fc'
-import {useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../firebase/config'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 
 const Signin = () => {
-  const navigate=useNavigate()
+  const provider = new GoogleAuthProvider()
+  const handleGoogleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        // const email = error.customData.email;
+        // // The AuthCredential type that was used.
+        // const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+        console.log(errorMessage);
+      });
+
+  }
+
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [authenticated, setAuthenticated]=useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     createUserWithEmailAndPassword(auth, email, password)
       .then((res) => {
-        console.log(res.user)
-        if(res.user){
-          setAuthenticated(!authenticated)
-          navigate('/login')
-        }
+        console.log(res);
+        navigate('/login')
+      }).catch((error) => {
+        alert(error.message)
+        navigate('/signin')
       })
+
   }
   return (
     <div className='h-full w-full mt-6 py-3 m-2 justify-center items-center mx-auto px-4'>
@@ -53,8 +74,9 @@ const Signin = () => {
         <input onChange={(e) => setPassword(e.target.value)} className='block justify-center items-center mx-auto w-[300px] h-8 m-4 p-1.5 rounded-md outline-none' type="password" name="" id="" placeholder='Password' />
         <button type='submit' onClick={handleSubmit} className='block justify-center items-center mx-auto bg-green-400 text-center rounded-lg w-[300px] h-8 m-4 text-[#000] hover:font-medium hover:scale-105 duration-300 ease-in-out '>Submit</button>
       </form>
-      <p className='text-[#f1f1f1] mx-auto font-semibold uppercase text-xs text-center mb-6 mt-6 max-w-[300px]'>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-      <h4 className='text-[#f1f1f1] max-w-[300px] mx-auto font-semibold uppercase text-xs text-center mb-6 mt-6 bg-[#eeeeff5d] rounded-md p-2 cursor-pointer '>Sign In With Google <FcGoogle size={20} className='inline ml-1 my-auto bg-[#ffeeee] mx-auto rounded-full' /></h4>
+      <Link to='/login'><p className='text-[#f1f1f1] mx-auto font-semibold hover:text-blue-400 text-xs text-center mb-6 mt-6 max-w-[300px]'>Already have an account? click here to login</p>
+      </Link>
+      <h4 onClick={handleGoogleLogin} className='text-[#f1f1f1] max-w-[300px] mx-auto font-semibold uppercase text-xs text-center mb-6 mt-6 bg-[#eeeeff5d] rounded-md p-2 cursor-pointer '>Sign In With Google <FcGoogle size={20} className='inline ml-1 my-auto bg-[#ffeeee] mx-auto rounded-full' /></h4>
 
     </div>
   )

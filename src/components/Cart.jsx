@@ -37,9 +37,9 @@ const Cart = () => {
             dolores asperiores veniam nobis deleniti cumque!
           </p>
 
-          <button
-            className="bg-[#09fd90] hover:bg-[#fffb11] hover:scale-105
-           ease-in-out duration-500  py-1 font-medium w-[100%] max-w-[120px]
+          <button 
+            className="bg-[#09fd90] hover:bg-[#fffb11] 
+           ease-in-out duration-500 hover:scale-110  py-1 font-medium w-[100%] max-w-[120px]
             mx-auto mt-3 rounded-lg text-[#000300] border-none"
           >
             Add to Cart
