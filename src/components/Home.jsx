@@ -2,8 +2,11 @@ import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import './styles.css'
-import Cart from "./Cart";
+import ProductList from "./ProductList";
+import { useSelector } from "react-redux";
+
 const Home = () => {
+ 
   return (
     <div className="h-full w-full my-auto  mx-auto ">
       <div className="h-full w-full my-[42px] relative ">
@@ -13,6 +16,7 @@ const Home = () => {
           autoPlay
           transitionTime={500}
           showThumbs={false}
+          swipeAnimationHandler
           className="max-w-[1280px] justify-center flex items-center
       ease-in-out duration-500 mx-auto sm:w-full text-white"
         >
@@ -54,9 +58,9 @@ const Home = () => {
         </Carousel>
       </div>
       <div className="text-[#fee] font-medium  min-w-full my-10 items-center justify-center flex">
-        
+
       </div>
-      <Cart />
+      <ProductList />
     </div>
   );
 };

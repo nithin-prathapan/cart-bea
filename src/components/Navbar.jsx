@@ -6,6 +6,8 @@ import "./styles.css";
 import shopImg from '../images/shopimg.png'
 import { useSelector } from "react-redux";
 const Navbar = () => {
+  const { name } = useSelector((state) => state.user)
+  console.log(name);
   const [nav, setNav] = useState(false);
   const { isLoggedIn } = useSelector((state) => state.user)
   console.log(isLoggedIn);
@@ -17,23 +19,23 @@ const Navbar = () => {
       </Link>
       <ul className="absolute uppercase flex right-8 ">
         <Link to="/">
-          <li className="link-underline  link-underline-black drop-shadow-lg text-green-600 l-2 pr-2 sm:hidden">
+          <li className="link-underline  link-underline-black drop-shadow-lg text-green-600 l-2 pr-2 sm:hidden font-thin">
             Home
           </li>
         </Link>
-        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-green-600 sm:hidden">
+        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-green-600 sm:hidden font-thin">
           About
         </li>
-        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-green-600 sm:hidden">
+        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-green-600 sm:hidden font-thin">
           Company
         </li>
-        <li className="link-underline  link-underline-black drop-shadow-lg  l-2 pr-2 flex  text-green-600 sm:hidden">
+        <li className="link-underline  link-underline-black drop-shadow-lg  l-2 pr-2 flex  text-green-600 sm:hidden font-thin">
           Resources
         </li>
         {
           isLoggedIn ? (
             <li className="drop-shadow-lg  text-green-600 l-2 pr-2 flex  sm:show">
-              Welcome
+              {name}
               <BiShoppingBag className="ml-2 text-green-600" size={20} />
               <div className="rounded-full inline  w-2 h-2  text-green-600">0</div>
             </li>

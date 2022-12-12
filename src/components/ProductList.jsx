@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import ruffle from "../images/ruffle.png";
 
-const Cart = () => {
+const ProductList = () => {
   return (
     <div className="h-[100%] my-10 mx-auto grid md:grid-cols-2 gap-y-4 gap-x-4 lg:grid-cols-4">
       <div
@@ -42,7 +42,7 @@ const Cart = () => {
            ease-in-out duration-500 hover:scale-110  py-1 font-medium w-[100%] max-w-[120px]
             mx-auto mt-3 rounded-lg text-[#000300] border-none"
           >
-            Add to Cart
+            Add to ProductList
           </button>
         </div>
       </div>
@@ -51,4 +51,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default ProductList;

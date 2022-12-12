@@ -3,14 +3,25 @@ import ReactTyped from 'react-typed'
 import { FcGoogle } from 'react-icons/fc'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../firebase/config'
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { useDispatch } from 'react-redux'
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth'
+import { userLogin } from '../redux/userSlice'
+import { useEffect } from 'react'
 
 const Signin = () => {
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [user, setUser] = useState({})
+
+  //login with google
   const provider = new GoogleAuthProvider()
-  const handleGoogleLogin = () => {
-    signInWithPopup(auth, provider)
+  const handleGoogleLogin = async () => {
+    await signInWithPopup(auth, provider)
       .then((result) => {
         console.log(result.user);
+        navigate('/')
       })
       .catch((error) => {
         // Handle Errors here.
@@ -21,15 +32,21 @@ const Signin = () => {
         // // The AuthCredential type that was used.
         // const credential = GoogleAuthProvider.credentialFromError(error);
         // ...
-        console.log(errorMessage);
+        alert(errorMessage);
       });
 
   }
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser)
+    })
+    return () => {
+      unsubscribe()
+    }
 
-  const navigate = useNavigate()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  }, [])
 
+  //login with email and password
   const handleSubmit = (e) => {
     e.preventDefault()
     createUserWithEmailAndPassword(auth, email, password)

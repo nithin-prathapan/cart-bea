@@ -16,16 +16,16 @@ const Login = () => {
         e.preventDefault()
         if (password.length !== 0 || email.length !== 0) {
 
-            signInWithEmailAndPassword(auth, email, password)
-                .then((res) => {
-                    console.log(res)
-                    dispatch(userLogin())
-                    navigate('/')
-                }).catch((error) => {
-                    console.log(error);
-                    alert('Please check your login credentials')
-                    navigate('/login')
-                })
+            // signInWithEmailAndPassword(auth, email, password)
+            //     .then((res) => {
+            //         console.log(res)
+            //         dispatch(userLogin())
+            //         navigate('/')
+            //     }).catch((error) => {
+            //         console.log(error);
+            //         alert('Please check your login credentials')
+            //         navigate('/login')
+            //     })
         }
 
     }

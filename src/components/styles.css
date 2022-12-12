@@ -30,5 +30,31 @@
   display: flex;
   justify-content: center;
   margin: 0 0 5rem -5rem;
-
+}
+/* .image-container {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 2rem;
+  margin: auto;
+  background-color: rgba(0, 0, 255, 0.336);
+}
+.image-container img {
+  max-width: 70px;
+  max-height: 70px;
+  margin: auto;
+} */
+.button {
+	--x: 50%;
+	--y: 50%;
+	
+	position: relative;
+	appearance: none;
+	color: white;
+	cursor: pointer;
+	outline: none;
+	border-radius: 100px;
+	
+	
+	border: 2px solid transparent;
+	background: linear-gradient(#000, #000) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #00C9A7, #845EC2) border-box;
 }
