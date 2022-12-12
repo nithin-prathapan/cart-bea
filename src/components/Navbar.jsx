@@ -4,8 +4,13 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import shopImg from '../images/shopimg.png'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from '../redux/userSlice'
 const Navbar = () => {
+  const dispatch = useDispatch()
+  const handleLogout = () => {
+    dispatch(logOut())
+  }
   const { name } = useSelector((state) => state.user)
   console.log(name);
   const [nav, setNav] = useState(false);
@@ -34,8 +39,8 @@ const Navbar = () => {
         </li>
         {
           isLoggedIn ? (
-            <li className="drop-shadow-lg  text-green-600 l-2 pr-2 flex  sm:show">
-              {name}
+            <li onClick={handleLogout} className="drop-shadow-lg font-thin  link-underline  link-underline-black text-green-600 l-2 pr-2 flex  sm:show">
+              Logout
               <BiShoppingBag className="ml-2 text-green-600" size={20} />
               <div className="rounded-full inline  w-2 h-2  text-green-600">0</div>
             </li>

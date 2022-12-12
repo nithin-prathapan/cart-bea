@@ -7,7 +7,7 @@ import './styles.css'
 const Checkout = () => {
     return (
 
-        <div className='bg-[#1cfdcc71] md:flex sm:grid min-h-[1280px] sm:grid-cols-1'>
+        <div className='bg-[#06080800] md:flex sm:grid min-h-[1280px] mx-auto sm:grid-cols-1'>
             <div className='w-[95%] sm:min-w-[95%] drop-shadow-lg max-h-[100%] mt-[66px] ml-2 border rounded-md mb-4 text-[#fee] md:max-w-[60%]'>
                 <div className='m-2 flex bg-[#2d2052d8] border-b border-t p-3 rounded-md'>
                     <div className="image-container h-[100px]">
@@ -45,7 +45,7 @@ const Checkout = () => {
                     <h1 className=' mb-2 font-mono font-bold tracking-[4px] w-[50%] text-[15px] text-[#ff8800f6]'>
                         Do you have a coupen code ?
                     </h1>
-                    <input type="text" name="" id="" placeholder='Enter your coupen code' className='h-[25px] placeholder:text-xs placeholder:font-semibold tracking-[4px] text-[#ff8800f6] p-4 w-[205px] items-center my-auto rounded-lg outline-none border bg-[#ffeeee27]' />
+                    <input type="text" name="" id="" placeholder='Enter your coupen code' className='h-[25px] placeholder:text-xs placeholder:tracking-wider placeholder:font-semibold placeholder:uppercase tracking-[4px] text-[#ff8800f6] p-4 w-[205px] items-center my-auto rounded-lg outline-none border bg-[#ffeeee27]' />
                 </div>
                 <div className='uppercase mt-4 mb-2 max-w-[100%] flex justify-between'>
                     <h1 className=' mb-2 font-mono font-bold tracking-[1px] text-[15px] text-[#ff8800f6]'>

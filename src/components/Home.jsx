@@ -3,10 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import './styles.css'
 import ProductList from "./ProductList";
-import { useSelector } from "react-redux";
+
+
 
 const Home = () => {
- 
   return (
     <div className="h-full w-full my-auto  mx-auto ">
       <div className="h-full w-full my-[42px] relative ">

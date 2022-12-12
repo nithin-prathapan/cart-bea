@@ -20,7 +20,6 @@ const Signin = () => {
   const handleGoogleLogin = async () => {
     await signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result.user);
         navigate('/')
       })
       .catch((error) => {
@@ -37,13 +36,10 @@ const Signin = () => {
 
   }
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser)
+    auth.onAuthStateChanged((user) => {
+      setUser(user)
+      dispatch(userLogin(user))
     })
-    return () => {
-      unsubscribe()
-    }
-
   }, [])
 
   //login with email and password
