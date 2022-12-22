@@ -17,37 +17,37 @@ const Navbar = () => {
   const { isLoggedIn } = useSelector((state) => state.user)
   console.log(isLoggedIn);
   return (
-    <div className="w-full max-h-[50px] drop-shadow-lg bg-[#000300] z-30 h-24 fixed top-0 items-center px-4 justify-between flex text-[#fee] mx-auto font-bold">
+    <div className="w-full max-h-[50px] drop-shadow-lg bg-[#ffffffa2] z-30 h-24 rounded-md fixed top-0 items-center px-4 justify-between flex text-[#fee] mx-auto font-bold">
       <Link to="/">
-        <h1 className=" text-green-600 top-0  text-xl ml-8 mt-2">CART-BAE</h1>
+        <h1 className=" text-[#000300] top-0  text-xl ml-8 mt-2 font-serif ">Cart<span className="text-[#f2ff36] bg-black">Bae</span></h1>
         <img className="flex max-w-[40px] absolute top-0" src={shopImg} alt="logo" />
       </Link>
       <ul className="absolute uppercase flex right-8 ">
         <Link to="/">
-          <li className="link-underline  link-underline-black drop-shadow-lg text-green-600 l-2 pr-2 sm:hidden font-thin">
+          <li className="link-underline  link-underline-black drop-shadow-lg text-[#000300] l-2 pr-2 sm:hidden text-sm font-medium hover:cursor-pointer">
             Home
           </li>
         </Link>
-        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-green-600 sm:hidden font-thin">
+        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-[#000300] sm:hidden text-sm font-medium hover:cursor-pointer">
           About
         </li>
-        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-green-600 sm:hidden font-thin">
+        <li className="link-underline link-underline-black drop-shadow-lg  pl-2 pr-2 flex  text-[#000300] sm:hidden text-sm font-medium hover:cursor-pointer">
           Company
         </li>
-        <li className="link-underline  link-underline-black drop-shadow-lg  l-2 pr-2 flex  text-green-600 sm:hidden font-thin">
+        <li className="link-underline  link-underline-black drop-shadow-lg  l-2 pr-2 flex  text-[#000300] sm:hidden text-sm font-medium hover:cursor-pointer">
           Resources
         </li>
         {
           isLoggedIn ? (
-            <li onClick={handleLogout} className="drop-shadow-lg font-thin  link-underline  link-underline-black text-green-600 l-2 pr-2 flex  sm:show">
+            <li onClick={handleLogout} className="drop-shadow-lg text-[#000300] text-sm  link-underline  link-underline-black font-medium hover:cursor-pointer l-2 pr-2 flex  sm:show">
               Logout
-              <BiShoppingBag className="ml-2 text-green-600" size={20} />
-              <div className="rounded-full inline  w-2 h-2  text-green-600">0</div>
+              <BiShoppingBag color="#000300" className="ml-2 text-green-600" size={20} />
+              <div className="rounded-full text-md inline  w-2 h-2  text-[#ff3636] drop-shadow-lg font-bold -mt-1">0</div>
             </li>
 
           ) : (
             <Link className="font-thin" to="/signin">
-              <li className="link-underline  link-underline-black drop-shadow-lg  l-2 pr-2 flex font-thin">
+              <li className="link-underline  link-underline-black drop-shadow-lg text-sm   l-2 pr-2 flex font-medium hover:cursor-pointer   text-[#000300]">
                 Sign-in
               </li>
             </Link>
@@ -55,7 +55,7 @@ const Navbar = () => {
         }
       </ul>
       <div onClick={() => setNav(!nav)} className="block md:hidden">
-        {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={25} />}
+        {!nav ? <AiOutlineMenu className="md:hidden lg:hidden sm:hidden  " color="#000300" size={20} /> : <AiOutlineClose size={25} />}
       </div>
       <div
         className={

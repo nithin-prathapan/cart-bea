@@ -1,7 +1,6 @@
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
 import userReducer from './userSlice'
 import productReducer from './productSlice'
-import thunk from 'redux-thunk'
 const store = configureStore({
    reducer: {
       user: userReducer,
