@@ -4,33 +4,34 @@ import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../firebase/config'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { userLogin } from '../redux/userSlice'
 const Login = () => {
+    const { name } = useSelector(state => state.user)
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
+    console.log(name);
     const handleLogin = (e) => {
         e.preventDefault()
         if (password.length !== 0 || email.length !== 0) {
 
-            // signInWithEmailAndPassword(auth, email, password)
-            //     .then((res) => {
-            //         console.log(res)
-            //         dispatch(userLogin())
-            //         navigate('/')
-            //     }).catch((error) => {
-            //         console.log(error);
-            //         alert('Please check your login credentials')
-            //         navigate('/login')
-            //     })
+            signInWithEmailAndPassword(auth, email, password)
+                .then((res) => {
+                    console.log(res)
+                    navigate('/')
+                    dispatch(userLogin(res.user))
+                }).catch((error) => {
+                    console.log(error);
+                    alert('Please check your login credentials')
+                    navigate('/login')
+                })
         }
 
     }
     return (
-        <div className='h-full w-full mt-6 py-3 m-2 justify-center items-center mx-auto px-4'>
+        <div className='h-[500px] w-full mt-[56px] justify-center items-center mx-auto px-4  bg-[#000000]'>
             <h1 className="text-[#fee] text-3xl text-center justify-center items-center">Welcome To Cart-Bae</h1>
             <p className='text-green-400 font-semibold uppercase text-center my-2'>Lorem amet consectetur ? <span>
                 <ReactTyped
