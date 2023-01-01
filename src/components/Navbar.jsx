@@ -29,11 +29,17 @@ const Navbar = () => {
         {
           isLoggedIn ? (<div className='flex justify-evenly w-full my-auto items-center'>
             <p className=''>Welcome</p>
-            <Link to='viewcart'>
-              <div>
-                <span className='text-[#fee] '><GiShoppingCart size={25} className="-mb-1 inline" color="#fee" /><p className='inline'>{totalQuantity}</p></span>
-              </div>
-            </Link>
+            {
+              totalQuantity > 0 ? (
+                <Link to='viewcart'>
+                  <div>
+                    <span className='text-[#fee] '><GiShoppingCart size={25} className="-mb-1 inline" color="#fee" /><p className='inline'>{totalQuantity}</p></span>
+                  </div>
+                </Link>
+              ) : (<div>
+                <p></p>
+              </div>)
+            }
           </div>) : (
             <div className='flex justify-evenly w-full'>
               <Link to='signin'>

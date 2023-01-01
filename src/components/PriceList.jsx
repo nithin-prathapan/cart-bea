@@ -1,18 +1,19 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate, Link } from 'react-router-dom'
+import { orderBill } from '../redux/productSlice'
 const PriceList = () => {
     const { totalAmount } = useSelector(state => state.products)
-    console.log(totalAmount);
     const sum = totalAmount.reduce((a, b) => {
         return a + b
     })
     const discount = Math.round((12 / 100) * sum)
     const payAmount = sum - discount
-    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    dispatch(orderBill(payAmount))
     return (
 
-        <div className=' fixed right-0 max-w-[38%] '>
+        <div className='max-w-[300px] ml-4 mx-auto'>
 
             <div className='mt-2 ml-1 drop-shadow-xl rounded-sm bg-[#fff] p-6  mx-auto flex-1 mr-2'>
                 <div className='border-b'>
@@ -38,9 +39,9 @@ const PriceList = () => {
                     <div className="justify-between flex mt-4  text-[#112636]  pb-2">
                         <h1 className='text-green-400'>You have saved Rs. {discount} with this order</h1>
                     </div>
-                    <a href="checkout">
+                    <Link to="checkout">
                         <button className='bg-green-400 pl-2 pr-2 pt-1 pb-1 text-sm rounded-md border border-black text-[#000000]'>Proceed To Checkout</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

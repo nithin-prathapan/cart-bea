@@ -15,6 +15,8 @@ import Dashboard from "./components/Dashboard";
 import Orders from "./components/Orders";
 import ViewCart from "./components/ViewCart";
 import { ToastContainer } from 'react-toastify'
+import Checkout from "./components/Checkout";
+import OrderSummary from "./components/OrderSummary";
 
 const App = () => {
   const location = useLocation()
@@ -47,6 +49,8 @@ const App = () => {
         <Route path="/adminp/orders" element={<Orders />} />
         <Route path="/adminp/dashboard" element={<Dashboard />} />
         <Route path="/card" element={<Card />} />
+        <Route path="viewcart/checkout" element={<Checkout />} />
+        <Route path="viewcart/checkout/orderSummary" element={<OrderSummary />} />
 
       </Routes>
       <Footer />
