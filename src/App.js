@@ -17,11 +17,10 @@ import ViewCart from "./components/ViewCart";
 import { ToastContainer } from 'react-toastify'
 import Checkout from "./components/Checkout";
 import OrderSummary from "./components/OrderSummary";
-
+import ProductDetails from "./components/ProductDetails";
 const App = () => {
   const location = useLocation()
   return (
-
     <div>
       <ToastContainer
         position="top-center"
@@ -37,7 +36,6 @@ const App = () => {
 
       }
       <Routes>
-
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/login" element={<Login />} />
@@ -51,13 +49,10 @@ const App = () => {
         <Route path="/card" element={<Card />} />
         <Route path="viewcart/checkout" element={<Checkout />} />
         <Route path="viewcart/checkout/orderSummary" element={<OrderSummary />} />
-
+        <Route path="productDetails" element={<ProductDetails />} />
       </Routes>
       <Footer />
-
-
     </div>
-
   );
 };
 

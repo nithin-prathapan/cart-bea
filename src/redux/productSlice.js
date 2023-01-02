@@ -4,7 +4,6 @@ import { toast } from "react-toastify";
 const items = localStorage.getItem('cartItems') !== null ? JSON.parse(localStorage.getItem('cartItems')) : []
 const totalAmount = localStorage.getItem('totalAmount') !== null ? JSON.parse(localStorage.getItem('totalAmount')) : 0
 const totalQuantity = localStorage.getItem('totalAmount') !== null ? JSON.parse(localStorage.getItem('totalQuantity')) : 0
-const orderDetails = localStorage.getItem('orderDetails') !== null ? JSON.parse(localStorage.getItem('orderDetails')) : []
 const setItemFunc = (item, totalAmount, totalQuantity) => {
     localStorage.setItem('cartItems', JSON.stringify(item))
     localStorage.setItem('totalQuantity', JSON.stringify(totalQuantity))
@@ -15,7 +14,8 @@ const initialState = {
     totalAmount: totalAmount,
     cartItems: items,
     orderBill: 0,
-    orderDetails: []
+    orderDetails: [],
+    productId: ""
 }
 
 const productSlice = createSlice({
@@ -96,13 +96,13 @@ const productSlice = createSlice({
                     ))
                 })
                 console.log(state.orderDetails);
-
-
             }
 
+        },
+        showDetails: (state, action) => {
+            state.productId = action.payload.id
         }
-
     }
 })
-export const { increment, decrement, removeFromCart, orderBill, placeOrder } = productSlice.actions;
+export const { increment, decrement, showDetails, removeFromCart, orderBill, placeOrder } = productSlice.actions;
 export default productSlice.reducer

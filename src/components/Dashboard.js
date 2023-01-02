@@ -24,8 +24,6 @@ const Dashboard = () => {
         pages: pages
 
     }
-    console.log(data);
-
     //==============ADD PRODUCTS ====================//
     const addProducts = e => {
         e.preventDefault();
@@ -33,7 +31,6 @@ const Dashboard = () => {
             const docRef = collection(db, 'products')
             const storageRef = ref(storage, `images/${file.name}`)
             uploadBytes(storageRef, file).then((snapshot) => {
-                console.log(snapshot);
                 getDownloadURL(snapshot.ref).then((downloadURL) => {
                     addDoc(docRef, {
                         title: title,
@@ -44,7 +41,6 @@ const Dashboard = () => {
                         release_date: releaseDate,
                         description: description,
                         imageURL: downloadURL,
-
                     })
                     console.log('document succesfully added');
                 })
@@ -100,7 +96,7 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <p className='text-left mx-auto w-[80%]'>Product Image</p>
-                <input type="file" className='justify-start mt-2 p-2 w-[80%] border-[1px]  border-[#f00] rounded-md'
+                <input type="file" className='justify-start mt-2 p-2 w-[80%] border-[1px] bg-white  border-[#f00] rounded-md'
                     onChange={e => setFile(e.target.files[0])} />
                 <div className='w-[80%] mx-auto mt-4'>
                     <input onClick={addProducts} type="button" value="Add Products"

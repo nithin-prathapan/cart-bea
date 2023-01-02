@@ -24,7 +24,7 @@ const ProductList = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
@@ -41,7 +41,7 @@ const ProductList = () => {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
@@ -70,13 +70,13 @@ const ProductList = () => {
 
 
     <div className="mb-8 mx-auto ">
-      <h1 className="mx-auto text-center text-xl font-semibold font-mono uppercase mt-6 border-b-2 border-b-[#000000] drop-shadow-md">Novels</h1>
+      <h1 className="mx-auto text-center text-xl font-semibold text-[#ffff] font-mono uppercase mt-6 border-b border-b-[#ffffff] drop-shadow-md">Novels</h1>
       <Slider {...settings} className="sm:max-w-[600px]">
         {products.filter((item) => item.category === "Novels").map((product, id) => (
           <Card key={id} product={product} />
         ))}
       </Slider>
-      <h1 className="mx-auto text-center text-xl font-semibold font-mono uppercase mt-6 border-b-2 border-b-[#000000] drop-shadow-md">SElf helping</h1>
+      <h1 className="mx-auto text-center text-xl font-semibold font-mono uppercase mt-6 border-b text-[#ffff] border-b-[#ffff] drop-shadow-md">SElf helping</h1>
       <Slider {...settings} className="sm:max-w-[600px]">
         {products.filter((item) => item.category === "Motivational").map((product, id) => (
           <Card key={id} product={product} />
